@@ -15,7 +15,7 @@ const HtmlPluginFunction = (name)=>({
     template: `./src/view/${name}.html`,
     inject: true,
     hash: true,
-    chunks: ['common',name],
+    chunks: ['common',name], 
     minify: {
         removeAttributeQuotes: true // 移除属性的引号
     }
@@ -99,7 +99,6 @@ module.exports = {
         new HtmlWebpackPlugin(HtmlPluginFunction('index')),
         new HtmlWebpackPlugin(HtmlPluginFunction('login')),
         new ExtractTextPlugin("css/[name].css"),
-        new webpack.BannerPlugin('版权声明'),          //给文件添加版权声明
         new PurifyCssPlugin({
             paths: glob.sync(path.resolve(__dirname,'src/*.html'))
         }),
