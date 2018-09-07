@@ -15,7 +15,7 @@ const HtmlPluginFunction = (name)=>({
     template: `./src/view/${name}.html`,
     inject: true,
     hash: true,
-    chunks: ['common',name], 
+    chunks: ['jquery','common',name], 
     minify: {
         removeAttributeQuotes: true // 移除属性的引号
     }
