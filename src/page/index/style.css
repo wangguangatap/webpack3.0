@@ -1,0 +1,11 @@
+body{
+    background: pink;
+    color: white;
+}
+
+.bg{
+    background-image: url(../../source/timg.jpeg);
+    width: 480px;
+    height: 800px;
+    transform: rotate(45deg );
+}
